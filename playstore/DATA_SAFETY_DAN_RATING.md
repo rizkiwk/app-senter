@@ -1,4 +1,4 @@
-# ✅ Jawaban Form "App Content" Play Console — Senter (`com.senter.flashlight`)
+# ✅ Jawaban Form "App Content" Play Console — Senter (`com.smile.senter`)
 
 Lembar klik-demi-klik untuk semua deklarasi wajib. Disusun dari fakta terverifikasi:
 **manifest nol `<uses-permission>`, nol SDK iklan/analitik, 100% offline, nol AD_ID.**
@@ -104,7 +104,7 @@ Audio files, Files & docs, Calendar, Contacts, App activity, Web browsing,
 ## 8. 🔗 Privacy policy
 | Field | Isi |
 |---|---|
-| Privacy policy URL | **(WAJIB diisi)** — host `PRIVACY_POLICY.md` ke URL publik dulu (GitHub Pages / Notion / situs), lalu tempel URL-nya |
+| Privacy policy URL | ✅ **`https://rizkiwk.github.io/senter-privacy/`** (sudah live di GitHub Pages — tinggal tempel) |
 
 > Email kontak di kebijakan sudah di-set: `smilecucok05@gmail.com`.
 > Tanpa URL publik aktif, form tak bisa di-submit (kebijakan sejak April 2022).

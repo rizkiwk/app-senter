@@ -14,11 +14,11 @@ val keystoreProps = Properties().apply {
 }
 
 android {
-    namespace = "com.senter.flashlight"
+    namespace = "com.smile.senter"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.senter.flashlight"
+        applicationId = "com.smile.senter"
         minSdk = 23          // CameraManager.setTorchMode() butuh API 23
         targetSdk = 36       // verifikasi ulang tenggat Play saat submit (min sah saat ini: API 35)
         versionCode = 1

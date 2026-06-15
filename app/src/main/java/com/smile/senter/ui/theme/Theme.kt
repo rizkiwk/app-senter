@@ -1,4 +1,4 @@
-package com.senter.flashlight.ui.theme
+package com.smile.senter.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

@@ -1,6 +1,6 @@
 # 🔦 Saran Tim — Kingdom of Science Multi-Agent AI Core
 
-> Dokumen advisory untuk proyek **Senter** (`com.senter.flashlight`).
+> Dokumen advisory untuk proyek **Senter** (`com.smile.senter`).
 > Distilasi riset + verifikasi adversarial + eksekusi build, dari 4 persona:
 > 🟢 Senku (first-principles) · 🔵 Sai (arsitektur kode) · 🟡 Chrome (DIY/MVP) · 🟣 Xeno (rilis & kepatuhan).
 > Disusun: 13 Juni 2026. Semua klaim teknis telah diverifikasi ke dokumentasi resmi.
@@ -126,7 +126,7 @@ Privasi kamera = soal **membaca sensor gambar**. Menyalakan senter = soal **menu
 - **Koreksi yang di-*refuted* (jangan diulang):** ambang *discoverability* app eksisting = **API 34** (app yang menarget API 33 atau lebih rendah jadi tak terlihat) — **bukan** API 35. Jangan campur ambang new-submission (35→36) dengan ambang discoverability (34).
 - **Privacy Policy URL publik wajib** sebelum upload, meski nol data.
 - **Keystore validity ≥ 25 thn**, simpan di luar repo, **backup** — hilang = tak bisa update app (kecuali reset upload key via Play App Signing).
-- **Catatan jujur soal izin di APK:** ada satu entri `com.senter.flashlight.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION` — itu **signature permission internal milik app sendiri** dari `androidx.core`, **bukan** izin sistem/user, **tak muncul di Play, tak menyentuh Data Safety**. Profil nol-izin tetap utuh.
+- **Catatan jujur soal izin di APK:** ada satu entri `com.smile.senter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION` — itu **signature permission internal milik app sendiri** dari `androidx.core`, **bukan** izin sistem/user, **tak muncul di Play, tak menyentuh Data Safety**. Profil nol-izin tetap utuh.
 
 ---
 

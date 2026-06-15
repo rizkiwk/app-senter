@@ -1,4 +1,4 @@
-package com.senter.flashlight
+package com.smile.senter
 
 import android.content.Context
 import android.hardware.camera2.CameraAccessException
@@ -26,6 +26,8 @@ sealed interface TorchState {
  */
 @RequiresApi(Build.VERSION_CODES.M) // API 23
 class TorchController(context: Context, private val demoMode: Boolean = false) {
+
+    private val appContext = context.applicationContext
 
     private val cameraManager =
         context.getSystemService(Context.CAMERA_SERVICE) as CameraManager
@@ -57,7 +59,7 @@ class TorchController(context: Context, private val demoMode: Boolean = false) {
 
         override fun onTorchModeUnavailable(cameraId: String) {
             if (cameraId == torchCameraId) {
-                _state.value = TorchState.Error("Senter sedang dipakai aplikasi lain")
+                _state.value = TorchState.Error(appContext.getString(R.string.err_torch_in_use))
             }
         }
     }
@@ -117,7 +119,7 @@ class TorchController(context: Context, private val demoMode: Boolean = false) {
             _state.value = TorchState.Error(mapCameraError(e))
             false
         } catch (e: IllegalArgumentException) {
-            _state.value = TorchState.Error("Senter tidak tersedia di perangkat ini")
+            _state.value = TorchState.Error(appContext.getString(R.string.err_torch_unavailable))
             false
         }
     }
@@ -143,9 +145,9 @@ class TorchController(context: Context, private val demoMode: Boolean = false) {
 
     private fun mapCameraError(e: CameraAccessException): String = when (e.reason) {
         CameraAccessException.CAMERA_IN_USE,
-        CameraAccessException.MAX_CAMERAS_IN_USE -> "Kamera sedang dipakai aplikasi lain"
-        CameraAccessException.CAMERA_DISABLED -> "Kamera dinonaktifkan kebijakan perangkat"
-        CameraAccessException.CAMERA_DISCONNECTED -> "Modul kamera terputus"
-        else -> "Gagal mengakses senter"
+        CameraAccessException.MAX_CAMERAS_IN_USE -> appContext.getString(R.string.err_camera_in_use)
+        CameraAccessException.CAMERA_DISABLED -> appContext.getString(R.string.err_camera_disabled)
+        CameraAccessException.CAMERA_DISCONNECTED -> appContext.getString(R.string.err_camera_disconnected)
+        else -> appContext.getString(R.string.err_camera_generic)
     }
 }

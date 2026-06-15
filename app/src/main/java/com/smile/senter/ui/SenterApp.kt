@@ -1,4 +1,4 @@
-package com.senter.flashlight.ui
+package com.smile.senter.ui
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
@@ -29,13 +29,15 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.senter.flashlight.SosController
-import com.senter.flashlight.TorchController
-import com.senter.flashlight.TorchState
-import com.senter.flashlight.data.SettingsRepository
-import com.senter.flashlight.ui.theme.SenterTheme
+import com.smile.senter.R
+import com.smile.senter.SosController
+import com.smile.senter.TorchController
+import com.smile.senter.TorchState
+import com.smile.senter.data.SettingsRepository
+import com.smile.senter.ui.theme.SenterTheme
 import kotlinx.coroutines.launch
 
 /**
@@ -101,9 +103,9 @@ private fun SenterScreen(
 
     val isOn = torchState is TorchState.On
     val statusText = when (val s = torchState) {
-        TorchState.On -> "MENYALA"
-        TorchState.Off -> "MATI"
-        TorchState.Unavailable -> "Perangkat ini tidak memiliki lampu flash"
+        TorchState.On -> stringResource(R.string.status_on)
+        TorchState.Off -> stringResource(R.string.status_off)
+        TorchState.Unavailable -> stringResource(R.string.status_unavailable)
         is TorchState.Error -> s.reason
     }
 
@@ -121,12 +123,12 @@ private fun SenterScreen(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            Text("Senter", style = MaterialTheme.typography.headlineSmall)
+            Text(stringResource(R.string.app_name), style = MaterialTheme.typography.headlineSmall)
             TextButton(onClick = {
                 val next = !(darkOverride ?: false)
                 scope.launch { settings.setDarkTheme(next) }
             }) {
-                Text(if (darkOverride == true) "Mode Terang" else "Mode Gelap")
+                Text(stringResource(if (darkOverride == true) R.string.theme_light else R.string.theme_dark))
             }
         }
 
@@ -144,7 +146,7 @@ private fun SenterScreen(
             colors = ButtonDefaults.buttonColors(),
         ) {
             Text(
-                if (isOn) "MATIKAN" else "NYALAKAN",
+                stringResource(if (isOn) R.string.btn_turn_off else R.string.btn_turn_on),
                 style = MaterialTheme.typography.titleLarge,
             )
         }
@@ -160,9 +162,9 @@ private fun SenterScreen(
                     }
                 },
                 enabled = torch.isAvailable,
-            ) { Text(if (sosRunning) "Stop SOS" else "SOS") }
+            ) { Text(stringResource(if (sosRunning) R.string.btn_sos_stop else R.string.btn_sos)) }
 
-            OutlinedButton(onClick = { screenLight = true }) { Text("Senter Layar") }
+            OutlinedButton(onClick = { screenLight = true }) { Text(stringResource(R.string.btn_screen_light)) }
         }
 
         Spacer(Modifier.height(48.dp))
@@ -171,7 +173,7 @@ private fun SenterScreen(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            Text("Matikan otomatis saat keluar")
+            Text(stringResource(R.string.auto_off_label))
             Switch(
                 checked = autoOff,
                 onCheckedChange = { scope.launch { settings.setAutoOff(it) } },

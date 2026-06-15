@@ -1,4 +1,4 @@
-package com.senter.flashlight
+package com.smile.senter
 
 import android.os.Build
 import android.service.quicksettings.Tile

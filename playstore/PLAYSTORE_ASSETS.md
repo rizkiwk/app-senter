@@ -1,4 +1,4 @@
-# 📦 Aset Play Store — Senter (`com.senter.flashlight`)
+# 📦 Aset Play Store — Senter (`com.smile.senter`)
 
 Disusun otomatis oleh Kingdom of Science (15 Jun 2026). Semua dimensi sudah lolos spec Play.
 
@@ -10,10 +10,12 @@ Disusun otomatis oleh Kingdom of Science (15 Jun 2026). Semua dimensi sudah lolo
 |---|---|---|---|---|
 | **Ikon hi-res** | `assets/icon_512.png` | 512×512 | PNG (alpha) | Sesuai spec (32-bit PNG with alpha) |
 | **Feature graphic** | `assets/feature_1024x500.jpg` | 1024×500 | JPEG (no-alpha) | **Pakai .jpg** (versi .png ber-alpha, dilarang Play) |
-| **Screenshot HP** | `screenshots/*.png` (5 file) | 1080×1920 | PNG | Lolos rasio 9:16; ≥4 untuk eligible featuring |
+| **Screenshot (id-ID)** | `captioned/*.png` (5) | 1080×1920 | PNG | UI Indonesia + caption ID — untuk listing **id-ID** |
+| **Screenshot (en-US)** | `captioned_en/*.png` (5) | 1080×1920 | PNG | UI Inggris + caption EN — untuk listing **en-US** |
 
-> Sumber editable: `assets/icon.svg`, `assets/feature.svg` (ubah lalu render ulang via `qlmanage -t -s 1024 -o . feature.svg`).
-> Versi mentah 1080×2400 (sebelum crop) ada di `raw/`.
+> App kini **dwibahasa** (default Indonesia + `values-en` English, ikut bahasa HP). Unggah set screenshot sesuai bahasa listing.
+> Tanpa caption (polos): `screenshots/` (id) & `screenshots_en/` (en). Mentah 1080×2400: `raw/` & `raw_en/`.
+> Sumber editable: `assets/icon.svg`, `assets/feature.svg` (render ulang via `qlmanage -t -s 1024 -o . feature.svg`).
 
 ---
 
@@ -39,7 +41,7 @@ Demo-mode HANYA aktif di build **debug** (`BuildConfig.DEBUG`), di-strip di rele
 ```bash
 ADB=~/Library/Android/sdk/platform-tools/adb
 S=emulator-5554
-ACT=com.senter.flashlight/.MainActivity
+ACT=com.smile.senter/.MainActivity
 # bersihkan dialog & status bar dulu:
 $ADB -s $S shell settings put global hide_error_dialogs 1
 # scene: on | off | sos | screenlight   ·   theme: light | dark
@@ -52,7 +54,7 @@ $ADB -s $S shell screencap -p /sdcard/s.png && $ADB -s $S pull /sdcard/s.png .
 
 ## 📋 Sisa Sebelum Publish (di luar aset)
 
-- [ ] Host `PRIVACY_POLICY.md` ke URL publik (wajib, walau nol data).
+- [x] ~~Host Privacy Policy ke URL publik~~ ✅ **LIVE: https://rizkiwk.github.io/senter-privacy/** (GitHub Pages, repo `rizkiwk/senter-privacy`).
 - [ ] Store listing: judul, deskripsi singkat & panjang (hindari keyword-stuffing — pasar senter disaring ketat).
 - [ ] Data Safety: "No data collected / No data shared".
 - [ ] Content rating (IARC) → Everyone.

@@ -3,4 +3,26 @@
     <string name="app_name">Senter</string>
     <string name="tile_label">Senter</string>
     <string name="shortcut_toggle">Buka Senter</string>
+
+    <!-- UI utama -->
+    <string name="status_on">MENYALA</string>
+    <string name="status_off">MATI</string>
+    <string name="status_unavailable">Perangkat ini tidak memiliki lampu flash</string>
+    <string name="btn_turn_on">NYALAKAN</string>
+    <string name="btn_turn_off">MATIKAN</string>
+    <string name="btn_sos">SOS</string>
+    <string name="btn_sos_stop">Stop SOS</string>
+    <string name="btn_screen_light">Senter Layar</string>
+    <string name="theme_dark">Mode Gelap</string>
+    <string name="theme_light">Mode Terang</string>
+    <string name="auto_off_label">Matikan otomatis saat keluar</string>
+    <string name="screen_light_exit">Ketuk untuk keluar</string>
+
+    <!-- Pesan error torch -->
+    <string name="err_torch_in_use">Senter sedang dipakai aplikasi lain</string>
+    <string name="err_torch_unavailable">Senter tidak tersedia di perangkat ini</string>
+    <string name="err_camera_in_use">Kamera sedang dipakai aplikasi lain</string>
+    <string name="err_camera_disabled">Kamera dinonaktifkan kebijakan perangkat</string>
+    <string name="err_camera_disconnected">Modul kamera terputus</string>
+    <string name="err_camera_generic">Gagal mengakses senter</string>
 </resources>

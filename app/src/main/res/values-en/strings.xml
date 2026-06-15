@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Senter</string>
+    <string name="tile_label">Senter</string>
+    <string name="shortcut_toggle">Open Senter</string>
+
+    <!-- Main UI -->
+    <string name="status_on">ON</string>
+    <string name="status_off">OFF</string>
+    <string name="status_unavailable">This device has no flashlight</string>
+    <string name="btn_turn_on">TURN ON</string>
+    <string name="btn_turn_off">TURN OFF</string>
+    <string name="btn_sos">SOS</string>
+    <string name="btn_sos_stop">Stop SOS</string>
+    <string name="btn_screen_light">Screen Light</string>
+    <string name="theme_dark">Dark mode</string>
+    <string name="theme_light">Light mode</string>
+    <string name="auto_off_label">Turn off automatically on exit</string>
+    <string name="screen_light_exit">Tap to exit</string>
+
+    <!-- Torch error messages -->
+    <string name="err_torch_in_use">Flashlight is in use by another app</string>
+    <string name="err_torch_unavailable">Flashlight is not available on this device</string>
+    <string name="err_camera_in_use">Camera is in use by another app</string>
+    <string name="err_camera_disabled">Camera disabled by device policy</string>
+    <string name="err_camera_disconnected">Camera module disconnected</string>
+    <string name="err_camera_generic">Failed to access the flashlight</string>
+</resources>

@@ -1,4 +1,4 @@
-package com.senter.flashlight
+package com.smile.senter
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -6,10 +6,10 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.lifecycleScope
-import com.senter.flashlight.BuildConfig
-import com.senter.flashlight.data.SettingsRepository
-import com.senter.flashlight.ui.DemoConfig
-import com.senter.flashlight.ui.SenterApp
+import com.smile.senter.BuildConfig
+import com.smile.senter.data.SettingsRepository
+import com.smile.senter.ui.DemoConfig
+import com.smile.senter.ui.SenterApp
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 

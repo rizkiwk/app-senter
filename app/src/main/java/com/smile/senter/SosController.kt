@@ -1,4 +1,4 @@
-package com.senter.flashlight
+package com.smile.senter
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

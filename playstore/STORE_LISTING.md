@@ -1,4 +1,4 @@
-# 📝 Store Listing — Senter (`com.senter.flashlight`)
+# 📝 Store Listing — Senter (`com.smile.senter`)
 
 Copy siap-tempel untuk Play Console. Ditulis jujur & feature-akurat untuk lolos filter
 *Misleading Metadata / Spam / Minimum Functionality* (pasar senter disaring ketat).

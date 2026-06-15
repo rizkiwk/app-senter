@@ -7,7 +7,7 @@
         android:shortcutShortLabel="@string/shortcut_toggle">
         <intent
             android:action="android.intent.action.MAIN"
-            android:targetPackage="com.senter.flashlight"
-            android:targetClass="com.senter.flashlight.MainActivity" />
+            android:targetPackage="com.smile.senter"
+            android:targetClass="com.smile.senter.MainActivity" />
     </shortcut>
 </shortcuts>

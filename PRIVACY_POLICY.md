@@ -2,7 +2,7 @@
 
 _Terakhir diperbarui: 13 Juni 2026_
 
-Aplikasi **Senter** (paket `com.senter.flashlight`) dirancang dengan prinsip privasi maksimum.
+Aplikasi **Senter** (paket `com.smile.senter`) dirancang dengan prinsip privasi maksimum.
 
 ## Data yang kami kumpulkan
 **Tidak ada.** Aplikasi ini:

@@ -1,4 +1,4 @@
-package com.senter.flashlight.ui.theme
+package com.smile.senter.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

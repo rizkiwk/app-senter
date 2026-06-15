@@ -1,4 +1,4 @@
-package com.senter.flashlight.ui
+package com.smile.senter.ui
 
 import android.app.Activity
 import android.view.WindowManager
@@ -14,7 +14,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import com.smile.senter.R
 
 /**
  * Mode senter berbasis layar: putih, kecerahan 100% — bersifat per-window via
@@ -52,7 +54,7 @@ fun ScreenLight(onExit: () -> Unit) {
         contentAlignment = Alignment.BottomCenter,
     ) {
         Text(
-            "Ketuk untuk keluar",
+            stringResource(R.string.screen_light_exit),
             color = Color(0xFF888888),
             modifier = Modifier.padding(40.dp),
         )
