@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Fallback bulat untuk API 23-25. -->
+    <path
+        android:fillColor="#101010"
+        android:pathData="M54,54m-54,0a54,54 0,1 1,108 0a54,54 0,1 1,-108 0" />
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M62,26 L41,58 L53,58 L46,84 L70,48 L57,48 Z" />
+</vector>

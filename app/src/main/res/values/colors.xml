@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#101010</color>
+    <!-- Latar splash screen: gelap brand, senada ikon launcher. -->
+    <color name="splash_background">#101010</color>
+</resources>

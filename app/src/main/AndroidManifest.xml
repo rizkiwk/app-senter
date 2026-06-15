@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        TIDAK ADA <uses-permission> sama sekali.
+        CameraManager.setTorchMode() tidak memerlukan izin sejak API 23
+        karena tidak membuka sesi kamera / tidak membaca sensor gambar.
+    -->
+
+    <!-- Flash & kamera OPSIONAL: required=false agar device tanpa flash tetap bisa
+         meng-install. Kode sudah menangani kondisi "tidak ada flash". -->
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Senter"
+        tools:targetApi="36">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Senter.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+
+        <!--
+            Quick Settings Tile (API 24+). android:permission di sini adalah
+            SIGNATURE permission yang ditegakkan SISTEM saat binding ke service —
+            BUKAN <uses-permission> yang diminta dari user. Klaim "nol izin user" tetap utuh.
+        -->
+        <service
+            android:name=".TorchTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_flash"
+            android:label="@string/tile_label"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.service.quicksettings.ACTIVE_TILE"
+                android:value="false" />
+        </service>
+
+    </application>
+</manifest>

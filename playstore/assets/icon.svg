@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Latar penuh #101010 (Play akan masking bentuknya) -->
+  <rect width="512" height="512" fill="#101010"/>
+  <!-- Petir amber: path asli dari ic_launcher_foreground (viewport 108), diskala & dipusatkan -->
+  <g transform="translate(256,256) scale(5.0) translate(-55.5,-55)">
+    <path d="M62,26 L41,58 L53,58 L46,84 L70,48 L57,48 Z" fill="#FFC107"/>
+  </g>
+</svg>

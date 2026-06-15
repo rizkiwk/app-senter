@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4a3a00"/>
+      <stop offset="100%" stop-color="#101010"/>
+    </radialGradient>
+  </defs>
+  <!-- Latar penuh kotak (konten dipusatkan di y=512; nanti di-crop ke pita tengah 1024x500) -->
+  <rect width="1024" height="1024" fill="#101010"/>
+  <!-- Glow halus di belakang petir -->
+  <circle cx="300" cy="512" r="220" fill="url(#glow)"/>
+  <!-- Petir amber (path asli ic_launcher_foreground) -->
+  <g transform="translate(300,512) scale(5.2) translate(-55.5,-55)">
+    <path d="M62,26 L41,58 L53,58 L46,84 L70,48 L57,48 Z" fill="#FFC107"/>
+  </g>
+  <!-- Wordmark + tagline (muat di zona aman, jauh dari tepi) -->
+  <text x="470" y="500" font-family="Helvetica, Arial, sans-serif" font-size="120" font-weight="bold" fill="#FFFFFF">Senter</text>
+  <text x="474" y="558" font-family="Helvetica, Arial, sans-serif" font-size="34" fill="#FFC107">Tanpa izin &#183; Tanpa iklan</text>
+</svg>

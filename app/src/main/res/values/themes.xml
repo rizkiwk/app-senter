@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema window dasar (light). Tidak memerlukan library Material Components;
+         warna UI sebenarnya diatur oleh Material3 di lapisan Compose. -->
+    <style name="Theme.Senter" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">#FFFAFAFA</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <!--
+        Tema splash via androidx core-splashscreen.
+        Parent Theme.SplashScreen disediakan library; di API 31+ memetakan ke splash sistem,
+        di API 23–30 dipakai oleh backport. Setelah splash selesai, activity beralih ke
+        postSplashScreenTheme (Theme.Senter).
+    -->
+    <style name="Theme.Senter.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="postSplashScreenTheme">@style/Theme.Senter</item>
+    </style>
+</resources>
